@@ -1,5 +1,5 @@
-function onLoad(start=false, save) {
-    load(save ?? localStorage.getItem(SAVE_KEY));
+function onLoad(start=false, str) {
+    load(str ?? localStorage.getItem(SAVE_KEY));
     getInitialGameData();
 
     if (start) {
