@@ -277,7 +277,7 @@ const getInitialUpgrades = () => {
     },data);
     Upgrade.create("prestige\\3",{
         unl: () => KAIZO.perkOwned(2,6),
-        description() { return `The frist 4 <b>Point Upgrades</b> are <b>+10%</b> stronger per level.` },
+        description() { return `The first 4 <b>Point Upgrades</b> are <b>+10%</b> stronger per level.` },
 
         cost: a => a.sumBase(1.1).powBase(KAIZO.perkOwned(2,10) ? 1e3 : 1e6).mul(1e6),
         bulk: a => a.div(1e6).log(KAIZO.perkOwned(2,10) ? 1e3 : 1e6).sumBase(1.1,true).floor().add(1),
